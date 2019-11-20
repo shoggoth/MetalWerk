@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF9364FF2384024200E4B867 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9364FE2384024200E4B867 /* AppDelegate.m */; };
 		FF9365022384024200E4B867 /* Renderer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9365012384024200E4B867 /* Renderer.m */; };
-		FF9365052384024200E4B867 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9365042384024200E4B867 /* GameViewController.m */; };
+		FF9365052384024200E4B867 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9365042384024200E4B867 /* RootViewController.m */; };
 		FF9365072384024200E4B867 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FF9365062384024200E4B867 /* Shaders.metal */; };
 		FF93650B2384024200E4B867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF9365092384024200E4B867 /* Main.storyboard */; };
 		FF93650D2384024300E4B867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF93650C2384024300E4B867 /* Assets.xcassets */; };
@@ -23,8 +23,8 @@
 		FF9364FE2384024200E4B867 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF9365002384024200E4B867 /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		FF9365012384024200E4B867 /* Renderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Renderer.m; sourceTree = "<group>"; };
-		FF9365032384024200E4B867 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		FF9365042384024200E4B867 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		FF9365032384024200E4B867 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		FF9365042384024200E4B867 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		FF9365062384024200E4B867 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		FF9365082384024200E4B867 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
 		FF93650A2384024200E4B867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,13 +68,13 @@
 				FF9364FE2384024200E4B867 /* AppDelegate.m */,
 				FF9365002384024200E4B867 /* Renderer.h */,
 				FF9365012384024200E4B867 /* Renderer.m */,
-				FF9365032384024200E4B867 /* GameViewController.h */,
-				FF9365042384024200E4B867 /* GameViewController.m */,
+				FF9365032384024200E4B867 /* RootViewController.h */,
+				FF9365042384024200E4B867 /* RootViewController.m */,
 				FF9365062384024200E4B867 /* Shaders.metal */,
 				FF9365082384024200E4B867 /* ShaderTypes.h */,
 				FF9365092384024200E4B867 /* Main.storyboard */,
-				FF93650C2384024300E4B867 /* Assets.xcassets */,
 				FF93650E2384024300E4B867 /* LaunchScreen.storyboard */,
+				FF93650C2384024300E4B867 /* Assets.xcassets */,
 				FF9365112384024300E4B867 /* Info.plist */,
 				FF9365122384024300E4B867 /* main.m */,
 			);
@@ -154,7 +154,7 @@
 				FF9365132384024300E4B867 /* main.m in Sources */,
 				FF9365072384024200E4B867 /* Shaders.metal in Sources */,
 				FF9365022384024200E4B867 /* Renderer.m in Sources */,
-				FF9365052384024200E4B867 /* GameViewController.m in Sources */,
+				FF9365052384024200E4B867 /* RootViewController.m in Sources */,
 				FF9364FF2384024200E4B867 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F9CYF5K3F;
 				INFOPLIST_FILE = MetalWerk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5F9CYF5K3F;
 				INFOPLIST_FILE = MetalWerk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,5 +1,5 @@
 //
-//  GameViewController.h
+//  RootViewController.h
 //  MetalWerk
 //
 //  Created by Richard Henry on 19/11/2019.
@@ -11,7 +11,7 @@
 #import <MetalKit/MetalKit.h>
 #import "Renderer.h"
 
-// Our iOS view controller
-@interface GameViewController : UIViewController
+// Root view controller
+@interface RootViewController : UIViewController
 
 @end
