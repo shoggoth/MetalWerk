@@ -114,8 +114,8 @@ static const NSUInteger kUniformBufferMax = 3;
     NSError *error;
     
     MTKMeshBufferAllocator *metalAllocator = [[MTKMeshBufferAllocator alloc] initWithDevice: device];
-    MDLMesh *mdlMesh = [MDLMesh newBoxWithDimensions:(vector_float3){4, 4, 4} segments:(vector_uint3){2, 2, 2} geometryType:MDLGeometryTypeTriangles inwardNormals:NO allocator:metalAllocator];
-    
+    MDLMesh *mdlMesh = [MDLMesh newCapsuleWithHeight:8 radii:(vector_float2){2, 2} radialSegments:16 verticalSegments:1 hemisphereSegments:4 geometryType:MDLGeometryTypeTriangles inwardNormals:NO allocator:metalAllocator];
+
     MDLVertexDescriptor *mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor);
     mdlVertexDescriptor.attributes[VertexAttributePosition].name  = MDLVertexAttributePosition;
     mdlVertexDescriptor.attributes[VertexAttributeTexcoord].name  = MDLVertexAttributeTextureCoordinate;
@@ -211,18 +211,18 @@ static const NSUInteger kUniformBufferMax = 3;
     [commandBuffer commit];
 }
 
-- (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size
-{
+- (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
+    
     /// Respond to drawable size or orientation changes here
     
-    float aspect = size.width / (float)size.height;
+    float aspect = size.width / size.height;
     projectionMatrix = matrix_perspective_right_hand(65.0f * (M_PI / 180.0f), aspect, 0.1f, 100.0f);
 }
 
 #pragma mark Matrix Math Utilities
 
-matrix_float4x4 matrix4x4_translation(float tx, float ty, float tz)
-{
+matrix_float4x4 matrix4x4_translation(float tx, float ty, float tz) {
+    
     return (matrix_float4x4) {{
         { 1,   0,  0,  0 },
         { 0,   1,  0,  0 },
