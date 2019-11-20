@@ -33,4 +33,6 @@
     view.delegate = renderer;
 }
 
+- (BOOL)prefersHomeIndicatorAutoHidden { return YES; }
+
 @end
