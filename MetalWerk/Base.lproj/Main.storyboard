@@ -27,8 +27,8 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No Metal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2p-lw-rwu">
-                            <rect key="frame" x="86" y="54" width="69" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Metal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2p-lw-rwu">
+                            <rect key="frame" x="85.5" y="53.5" width="69" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -36,8 +36,8 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="i2p-lw-rwu" firstAttribute="centerX" secondItem="wMN-qx-89e" secondAttribute="centerX" id="VDM-3K-i4w"/>
-                        <constraint firstItem="i2p-lw-rwu" firstAttribute="centerY" secondItem="wMN-qx-89e" secondAttribute="centerY" id="nMc-Yp-eVT"/>
+                        <constraint firstItem="i2p-lw-rwu" firstAttribute="centerX" secondItem="Vyo-TS-5M4" secondAttribute="centerX" id="VDM-3K-i4w"/>
+                        <constraint firstItem="i2p-lw-rwu" firstAttribute="centerY" secondItem="Vyo-TS-5M4" secondAttribute="centerY" id="nMc-Yp-eVT"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="wMN-qx-89e"/>
                 </view>

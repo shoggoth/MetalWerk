@@ -9,8 +9,8 @@
 #import "RootViewController.h"
 #import "Renderer.h"
 
-@implementation RootViewController
-{
+@implementation RootViewController {
+    
     IBOutlet UIView *noMetalView;           // This view replaces the main view if Metal initialisation fails.
     
     MTKView         *view;
@@ -26,8 +26,6 @@
     // Create Metal device and check that Metal is supported.
     view.device = MTLCreateSystemDefaultDevice();
     if (!view.device) { self.view = noMetalView; return; }
-
-    view.backgroundColor = UIColor.blackColor;
 
     // Setup renderer
     renderer = [[Renderer alloc] initWithMetalKitView:view];
