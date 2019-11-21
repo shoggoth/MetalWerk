@@ -8,7 +8,7 @@
 
 #import "Matrix.h"
 
-#pragma mark Matrix Math Utilities
+#pragma mark Affine transforms
 
 matrix_float4x4 matrix4x4_translation(float tx, float ty, float tz) {
     
@@ -17,6 +17,16 @@ matrix_float4x4 matrix4x4_translation(float tx, float ty, float tz) {
         { 0,   1,  0,  0 },
         { 0,   0,  1,  0 },
         { tx, ty, tz,  1 }
+    }};
+}
+
+matrix_float4x4 matrix4x4_scale(float sx, float sy, float sz) {
+    
+    return (matrix_float4x4) {{
+        { sx,  0,   0,  0 },
+        { 0,   sy,  0,  0 },
+        { 0,   0,   sz, 0 },
+        { 0,   0,   0,  1 }
     }};
 }
 
@@ -35,6 +45,8 @@ matrix_float4x4 matrix4x4_rotation(float radians, vector_float3 axis) {
         {                   0,                   0,                   0, 1}
     }};
 }
+
+#pragma mark Projection
 
 matrix_float4x4 matrix_perspective_right_hand(float fovyRadians, float aspect, float nearZ, float farZ) {
     
