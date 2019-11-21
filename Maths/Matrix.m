@@ -46,7 +46,7 @@ matrix_float4x4 matrix4x4_rotation(float radians, vector_float3 axis) {
     }};
 }
 
-#pragma mark Projection
+#pragma mark Projections
 
 matrix_float4x4 matrix_perspective_right_hand(float fovyRadians, float aspect, float nearZ, float farZ) {
     
