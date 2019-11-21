@@ -127,10 +127,7 @@ static const NSUInteger kUniformBufferMax = 3;
     if (!mesh || error) NSLog(@"Error creating MetalKit mesh %@", error.localizedDescription);
     
     MTKTextureLoader* textureLoader = [[MTKTextureLoader alloc] initWithDevice:device];
-    NSDictionary *textureLoaderOptions = @{
-        MTKTextureLoaderOptionTextureUsage       : @(MTLTextureUsageShaderRead),
-        MTKTextureLoaderOptionTextureStorageMode : @(MTLStorageModePrivate)
-    };
+    NSDictionary *textureLoaderOptions = @{ MTKTextureLoaderOptionTextureUsage : @(MTLTextureUsageShaderRead), MTKTextureLoaderOptionTextureStorageMode : @(MTLStorageModePrivate) };
     
     colourMap = [textureLoader newTextureWithName:@"ColorMap" scaleFactor:1.0 bundle:nil options:textureLoaderOptions error:&error];
     
