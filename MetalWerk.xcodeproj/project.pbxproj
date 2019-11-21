@@ -15,7 +15,36 @@
 		FF93650D2384024300E4B867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF93650C2384024300E4B867 /* Assets.xcassets */; };
 		FF9365102384024300E4B867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF93650E2384024300E4B867 /* LaunchScreen.storyboard */; };
 		FF9365132384024300E4B867 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF9365122384024300E4B867 /* main.m */; };
+		FF9365232386CEEE00E4B867 /* Maths.h in Headers */ = {isa = PBXBuildFile; fileRef = FF9365212386CEEE00E4B867 /* Maths.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF9365262386CEEE00E4B867 /* Maths.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF93651F2386CEEE00E4B867 /* Maths.framework */; };
+		FF9365272386CEEE00E4B867 /* Maths.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF93651F2386CEEE00E4B867 /* Maths.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF93652D2386CF6A00E4B867 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = FF93652C2386CF6A00E4B867 /* Matrix.m */; };
+		FF93652F2386CF9800E4B867 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = FF93652E2386CF9800E4B867 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF9365242386CEEE00E4B867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF9364F22384024200E4B867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF93651E2386CEEE00E4B867;
+			remoteInfo = Maths;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF93652B2386CEEE00E4B867 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF9365272386CEEE00E4B867 /* Maths.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FF9364FA2384024200E4B867 /* MetalWerk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalWerk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +61,23 @@
 		FF93650F2384024300E4B867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF9365112384024300E4B867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF9365122384024300E4B867 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF93651F2386CEEE00E4B867 /* Maths.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Maths.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9365212386CEEE00E4B867 /* Maths.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Maths.h; sourceTree = "<group>"; };
+		FF9365222386CEEE00E4B867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF93652C2386CF6A00E4B867 /* Matrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
+		FF93652E2386CF9800E4B867 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FF9364F72384024200E4B867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9365262386CEEE00E4B867 /* Maths.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF93651C2386CEEE00E4B867 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FF9364FC2384024200E4B867 /* MetalWerk */,
+				FF9365202386CEEE00E4B867 /* Maths */,
 				FF9364FB2384024200E4B867 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				FF9364FA2384024200E4B867 /* MetalWerk.app */,
+				FF93651F2386CEEE00E4B867 /* Maths.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,7 +125,30 @@
 			path = MetalWerk;
 			sourceTree = "<group>";
 		};
+		FF9365202386CEEE00E4B867 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				FF9365212386CEEE00E4B867 /* Maths.h */,
+				FF93652C2386CF6A00E4B867 /* Matrix.m */,
+				FF93652E2386CF9800E4B867 /* Matrix.h */,
+				FF9365222386CEEE00E4B867 /* Info.plist */,
+			);
+			path = Maths;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FF93651A2386CEEE00E4B867 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9365232386CEEE00E4B867 /* Maths.h in Headers */,
+				FF93652F2386CF9800E4B867 /* Matrix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FF9364F92384024200E4B867 /* MetalWerk */ = {
@@ -91,15 +158,35 @@
 				FF9364F62384024200E4B867 /* Sources */,
 				FF9364F72384024200E4B867 /* Frameworks */,
 				FF9364F82384024200E4B867 /* Resources */,
+				FF93652B2386CEEE00E4B867 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF9365252386CEEE00E4B867 /* PBXTargetDependency */,
 			);
 			name = MetalWerk;
 			productName = MetalWerk;
 			productReference = FF9364FA2384024200E4B867 /* MetalWerk.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FF93651E2386CEEE00E4B867 /* Maths */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF9365282386CEEE00E4B867 /* Build configuration list for PBXNativeTarget "Maths" */;
+			buildPhases = (
+				FF93651A2386CEEE00E4B867 /* Headers */,
+				FF93651B2386CEEE00E4B867 /* Sources */,
+				FF93651C2386CEEE00E4B867 /* Frameworks */,
+				FF93651D2386CEEE00E4B867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Maths;
+			productName = Maths;
+			productReference = FF93651F2386CEEE00E4B867 /* Maths.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -111,6 +198,9 @@
 				ORGANIZATIONNAME = "Dogstar Industries Ltd.";
 				TargetAttributes = {
 					FF9364F92384024200E4B867 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					FF93651E2386CEEE00E4B867 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -129,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				FF9364F92384024200E4B867 /* MetalWerk */,
+				FF93651E2386CEEE00E4B867 /* Maths */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +232,13 @@
 				FF9365102384024300E4B867 /* LaunchScreen.storyboard in Resources */,
 				FF93650D2384024300E4B867 /* Assets.xcassets in Resources */,
 				FF93650B2384024200E4B867 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF93651D2386CEEE00E4B867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +257,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF93651B2386CEEE00E4B867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF93652D2386CF6A00E4B867 /* Matrix.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF9365252386CEEE00E4B867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF93651E2386CEEE00E4B867 /* Maths */;
+			targetProxy = FF9365242386CEEE00E4B867 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FF9365092384024200E4B867 /* Main.storyboard */ = {
@@ -327,6 +441,58 @@
 			};
 			name = Release;
 		};
+		FF9365292386CEEE00E4B867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Maths/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ltd.dogstar.Maths;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FF93652A2386CEEE00E4B867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5F9CYF5K3F;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Maths/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ltd.dogstar.Maths;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,6 +510,15 @@
 			buildConfigurations = (
 				FF9365172384024300E4B867 /* Debug */,
 				FF9365182384024300E4B867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF9365282386CEEE00E4B867 /* Build configuration list for PBXNativeTarget "Maths" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF9365292386CEEE00E4B867 /* Debug */,
+				FF93652A2386CEEE00E4B867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
