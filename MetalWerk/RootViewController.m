@@ -11,10 +11,10 @@
 
 @implementation RootViewController {
     
-    IBOutlet UIView *noMetalView;           // This view replaces the main view if Metal initialisation fails.
+    IBOutlet UIView     *noMetalView;           // This view replaces the main view if Metal initialisation fails.
     
-    MTKView         *view;
-    Renderer        *renderer;
+    MTKView             *view;
+    id <MetalRenderer>  renderer;
 }
 
 - (void)viewDidLoad {
