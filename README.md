@@ -1,4 +1,7 @@
 # MetalWerk
 Metal experiments.
 
-Does this end up being checked out as part of something?
+## TODO Next:
+
+Ping pong buffering to create the feedback effect. Here is something of an example that might be of use:
+https://crimild.wordpress.com/2016/06/09/praise-the-metal-part-6-post-processing/

@@ -8,8 +8,6 @@
 
 @import Maths;
 
-#import <ModelIO/ModelIO.h>
-
 #import "Renderer.h"
 #import "ShaderTypes.h"             // Include header shared between C code here, which executes Metal API commands, and .metal files
 
@@ -36,7 +34,7 @@ static const NSUInteger kUniformBufferMax = 3;
 
 -(nonnull instancetype)initWithMetalKitView:(nonnull MTKView *)view {
     
-    if((self = [super init])) {
+    if ((self = [super init])) {
         
         device = view.device;
         frameBufferSemaphore = dispatch_semaphore_create(kUniformBufferMax);
