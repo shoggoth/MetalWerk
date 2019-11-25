@@ -31,6 +31,13 @@
     renderer = [[Renderer alloc] initWithMetalKitView:view];
     [renderer mtkView:view drawableSizeWillChange:view.bounds.size];
     view.delegate = renderer;
+    
+#ifdef DEBUG
+    float viewContentsScale = view.layer.contentsScale;
+    float screenContentsScale = [[UIScreen mainScreen] scale];
+    
+    NSAssert(viewContentsScale == screenContentsScale, @"View (%f) and screen (%f) scale mismatch", viewContentsScale, screenContentsScale);
+#endif
 }
 
 - (BOOL)prefersHomeIndicatorAutoHidden { return YES; }
