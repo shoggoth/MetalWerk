@@ -21,6 +21,7 @@
 		FF93652D2386CF6A00E4B867 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = FF93652C2386CF6A00E4B867 /* Matrix.m */; };
 		FF93652F2386CF9800E4B867 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = FF93652E2386CF9800E4B867 /* Matrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF9365322388237400E4B867 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FF9365312388237400E4B867 /* README.md */; };
+		FFF42957238FF7B400114B98 /* PingPongRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF42956238FF7B400114B98 /* PingPongRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		FF93652C2386CF6A00E4B867 /* Matrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		FF93652E2386CF9800E4B867 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
 		FF9365312388237400E4B867 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		FFF42955238FF7B400114B98 /* PingPongRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingPongRenderer.h; sourceTree = "<group>"; };
+		FFF42956238FF7B400114B98 /* PingPongRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingPongRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				FF9364FE2384024200E4B867 /* AppDelegate.m */,
 				FF9365002384024200E4B867 /* Renderer.h */,
 				FF9365012384024200E4B867 /* Renderer.m */,
+				FFF42955238FF7B400114B98 /* PingPongRenderer.h */,
+				FFF42956238FF7B400114B98 /* PingPongRenderer.m */,
 				FF9365032384024200E4B867 /* RootViewController.h */,
 				FF9365042384024200E4B867 /* RootViewController.m */,
 				FF9365062384024200E4B867 /* Shaders.metal */,
@@ -255,6 +260,7 @@
 			files = (
 				FF9365132384024300E4B867 /* main.m in Sources */,
 				FF9365072384024200E4B867 /* Shaders.metal in Sources */,
+				FFF42957238FF7B400114B98 /* PingPongRenderer.m in Sources */,
 				FF9365022384024200E4B867 /* Renderer.m in Sources */,
 				FF9365052384024200E4B867 /* RootViewController.m in Sources */,
 				FF9364FF2384024200E4B867 /* AppDelegate.m in Sources */,
