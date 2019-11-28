@@ -28,7 +28,7 @@
     if (!view.device) { self.view = noMetalView; return; }
 
     // Setup renderer
-    renderer = [[Renderer alloc] initWithMetalKitView:view];
+    renderer = [[TestRenderer alloc] initWithMetalKitView:view];
     [renderer mtkView:view drawableSizeWillChange:view.bounds.size];
     view.delegate = renderer;
     
