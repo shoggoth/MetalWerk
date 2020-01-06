@@ -6,13 +6,9 @@
 //  Copyright © 2019 Dogstar Industries Ltd. All rights reserved.
 //
 
-// File for Metal kernel and shader functions
+#import "ShaderTypes.h" // Shared Metal/Swift/Obj-C types
 
-#include <metal_stdlib>
-#include <simd/simd.h>
-
-// Including header shared between this Metal shader code and Swift/C code executing Metal API commands
-#import "ShaderTypes.h"
+#include <metal_stdlib> // Metal kernel and shader functions
 
 using namespace metal;
 
@@ -26,7 +22,7 @@ typedef struct {
     float2 texCoord;
 } ColorInOut;
 
-vertex ColorInOut vertexShader(Vertex in [[stage_in]], constant Uniforms &uniforms [[buffer(BufferIndexUniforms)]]) {
+vertex ColorInOut meshVertexShader(Vertex in [[stage_in]], constant Uniforms &uniforms [[buffer(BufferIndexUniforms)]]) {
     
     ColorInOut out;
     
@@ -37,13 +33,15 @@ vertex ColorInOut vertexShader(Vertex in [[stage_in]], constant Uniforms &unifor
     return out;
 }
 
-fragment float4 fragmentShader(ColorInOut in [[stage_in]],
-                               constant Uniforms & uniforms [[buffer(BufferIndexUniforms)]],
-                               texture2d<half> colorMap     [[texture(TextureIndexColor)]]) {
+fragment float4 meshFragmentShader(ColorInOut in [[stage_in]],
+                               constant Uniforms &uniforms [[buffer(BufferIndexUniforms)]],
+                               texture2d<half> colorMap [[texture(TextureIndexColor)]]) {
     
     constexpr sampler colorSampler(mip_filter::linear, mag_filter::linear, min_filter::linear);
     
-    half4 colorSample   = colorMap.sample(colorSampler, in.texCoord.xy);
+    half4 colorSample = colorMap.sample(colorSampler, in.texCoord.xy);
+    
+    colorSample.r = half(uniforms.time);
     
     return float4(colorSample);
 }

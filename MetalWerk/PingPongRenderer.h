@@ -6,8 +6,6 @@
 //  Copyright © 2019 Dogstar Industries Ltd. All rights reserved.
 //
 
-#import <MetalKit/MetalKit.h>
-
 #import "Renderer.h"
 
 @interface PingPongRenderer : Renderer

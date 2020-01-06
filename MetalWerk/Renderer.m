@@ -102,8 +102,8 @@ static const NSUInteger kBufferCountDefault = 3;
 
     // Do summat
     id <MTLLibrary> defaultLibrary = [device newDefaultLibrary];
-    pipelineStateDescriptor.vertexFunction = [defaultLibrary newFunctionWithName:@"vertexShader"];
-    pipelineStateDescriptor.fragmentFunction = [defaultLibrary newFunctionWithName:@"fragmentShader"];
+    pipelineStateDescriptor.vertexFunction = [defaultLibrary newFunctionWithName:@"meshVertexShader"];
+    pipelineStateDescriptor.fragmentFunction = [defaultLibrary newFunctionWithName:@"meshFragmentShader"];
     
     // Do summat
     vertexDescriptor = [MTLVertexDescriptor new];
@@ -176,6 +176,9 @@ static const NSUInteger kBufferCountDefault = 3;
     // Update any game state before encoding renderint commands to our drawable
     Uniforms *uniforms = (Uniforms *)dynamicUniformBuffer[bufferIndex].contents;
     
+    uniforms->time += 0.001;
+    modff(uniforms->time, &uniforms->time);
+
     uniforms->projectionMatrix = projectionMatrix;
     
     vector_float3 rotationAxis = {1, 1, 0};
@@ -213,7 +216,7 @@ static const NSUInteger kBufferCountDefault = 3;
         [renderEncoder setDepthStencilState:depthState];
         
         [renderEncoder setVertexBuffer:dynamicUniformBuffer[bufferIndex] offset:0 atIndex:BufferIndexUniforms];
-        //[renderEncoder setFragmentBuffer:dynamicUniformBuffer[bufferIndex] offset:0 atIndex:BufferIndexUniforms];
+        [renderEncoder setFragmentBuffer:dynamicUniformBuffer[bufferIndex] offset:0 atIndex:BufferIndexUniforms];
         
         for (unsigned bufferIndex = 0; bufferIndex < mesh.vertexBuffers.count; bufferIndex++) {
             

@@ -16,7 +16,7 @@
 #define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
 #define NSInteger metal::int32_t
 #else
-#import <Foundation/Foundation.h>
+@import Foundation;
 #endif
 
 #include <simd/simd.h>
@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, TextureIndex) {
 typedef struct {
     matrix_float4x4 projectionMatrix;
     matrix_float4x4 modelViewMatrix;
+    float time;
 } Uniforms;
 
 #endif /* ShaderTypes_h */
